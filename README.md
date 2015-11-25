@@ -24,17 +24,16 @@ The following shows how import the controllers and use:
     <!-- Helper files -->
     <script src="scripts/BuzzlogixTextAnalysisAPILib/Configuration.js"></script>
     <script src="scripts/BuzzlogixTextAnalysisAPILib/APIHelper.js"></script>
-    <script src="scripts/BuzzlogixTextAnalysisAPILib/CustomAuthUtility.js"></script>
     <script src="scripts/BuzzlogixTextAnalysisAPILib/Http/Client/HttpContext.js"></script>
     <script src="scripts/BuzzlogixTextAnalysisAPILib/Http/Client/RequestClient.js"></script>
     <script src="scripts/BuzzlogixTextAnalysisAPILib/Http/Request/HttpRequest.js"></script>
     <script src="scripts/BuzzlogixTextAnalysisAPILib/Http/Response/HttpResponse.js"></script>
 
     <!-- API Controllers -->
+    <script src="scripts/BuzzlogixTextAnalysisAPILib/Controllers/TwittersentimentController.js"></script>
+    <script src="scripts/BuzzlogixTextAnalysisAPILib/Controllers/KeywordsController.js"></script>
     <script src="scripts/BuzzlogixTextAnalysisAPILib/Controllers/ObjectivityController.js"></script>
     <script src="scripts/BuzzlogixTextAnalysisAPILib/Controllers/SentimentController.js"></script>
-    <script src="scripts/BuzzlogixTextAnalysisAPILib/Controllers/TwittersentimentController.js"></script>
-
 
 
 3) Inject the module into your main module e.g:
@@ -43,6 +42,6 @@ The following shows how import the controllers and use:
 
 4) To use a generated factory in your controller, injection could be as follows : 
  
-    myApp.controller('PageCtrl',function($scope,ObjectivityController) {
+    myApp.controller('PageCtrl',function($scope,TwittersentimentController) {
 
     }

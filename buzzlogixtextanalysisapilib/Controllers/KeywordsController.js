@@ -5,7 +5,7 @@
   */
 
 'use strict';
-angular.module('BuzzlogixTextAnalysisAPILib').factory('SentimentController',function($q,Configuration,HttpClient,APIHelper){
+angular.module('BuzzlogixTextAnalysisAPILib').factory('KeywordsController',function($q,Configuration,HttpClient,APIHelper){
     return{
         /**
          * The text should be provided as text/plain in the body
@@ -13,11 +13,11 @@ angular.module('BuzzlogixTextAnalysisAPILib').factory('SentimentController',func
          *
          * @return {promise<mixed>}
          */
-        createReturnEnglishGeneralSentiment : function(body){
+        createReturnEnglishKeywords : function(body){
 
             //prepare query string for API call
             var baseUri = Configuration.BASEURI
-            var queryBuilder = baseUri + "/sentiment";
+            var queryBuilder = baseUri + "/keywords";
             
             //validate and preprocess url
             var queryUrl = APIHelper.cleanUrl(queryBuilder);
@@ -68,11 +68,11 @@ angular.module('BuzzlogixTextAnalysisAPILib').factory('SentimentController',func
          *
          * @return {promise<mixed>}
          */
-        createReturnEnglishGeneralSentimentForm : function(body){
+        createReturnEnglishKeywordsForm : function(body){
 
             //prepare query string for API call
             var baseUri = Configuration.BASEURI
-            var queryBuilder = baseUri + "/sentiment/form";
+            var queryBuilder = baseUri + "/keywords/form";
             
             //validate and preprocess url
             var queryUrl = APIHelper.cleanUrl(queryBuilder);
